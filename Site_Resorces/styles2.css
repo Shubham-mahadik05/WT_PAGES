@@ -16,14 +16,9 @@ h2{
     padding: 2px;
     margin: 10px 10px 10px 10px;
 }
-.logo{
+.logo {
     margin-left: auto; /* Push the logo to the right */
     align-items: center;
-    margin-right: 20px; /* Add spacing between logo divs */
-}
-.Logo {
-    margin-left: auto; /* Push the logo to the right */
-    align-items: center;
-    margin-right: 10px; /* Add spacing between logo elements */
-    gap: 10px; /* Ensure spacing between multiple .Logo elements */
+    margin-right: 10px; /* Reduce spacing between logo elements */
+    gap: 10px; /* Reduce spacing between multiple .Logo elements */
 }
