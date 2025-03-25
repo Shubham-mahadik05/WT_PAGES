@@ -16,9 +16,63 @@ h2{
     padding: 2px;
     margin: 10px 10px 10px 10px;
 }
+.title h1 {
+    font-size: 2.0rem; /* Increase text size */
+    color: #1e3a8a; /* Add blue color */
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 .logo {
     margin-left: auto; /* Push the logo to the right */
     align-items: center;
     margin-right: 10px; /* Reduce spacing between logo elements */
     gap: 10px; /* Reduce spacing between multiple .Logo elements */
+}
+
+.moving-text {
+    font-size: 16px;
+    color: white;
+    background-color: #1e3a8a;
+    padding: 5px 0;
+}
+
+.secondary-nav {
+    background-color: #231553;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.secondary-nav .nav-links {
+    list-style: none;
+    display: inline-flex;
+    gap: 100px;
+    padding: 0;
+    margin: 0;
+}
+
+.secondary-nav .nav-links a {
+    color: #f7f7f7;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.top-bar {
+    background-color: #ff6600;
+    color: white;
+    text-align: left; /* Align content to the left */
+    padding: 10px;
+    display: flex;
+    justify-content: flex-start; /* Align items to the left */
+    align-items: center;
+}
+
+.dte-code {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between text and icon */
+}
+
+.bookmark-icon {
+    width: 20px;
+    height: 20px;
 }

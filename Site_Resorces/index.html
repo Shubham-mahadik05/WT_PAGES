@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>College Website</title>
+    <link rel="stylesheet" href="styles2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -15,6 +18,16 @@
             color: white;
             text-align: center;
             padding: 10px;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+        }
+        .dte-code {
+            display: flex;
+            align-items: center;
+        }
+        .bookmark-icon {
+            margin-left: 10px;
         }
         .navbar {
             display: flex;
@@ -75,18 +88,42 @@
     </style>
 </head>
 <body>
-    <header class="top-bar">DTE Code : EN-6277</header>
+    <header class="top-bar">
+        <div class="dte-code">
+            <span class="fa-solid fa-bookmark"></span>
+            <span>DTE Code : EN-6277</span>
+        </div>
+    </header>
+    <div class="title">
+        <div class="Logo">
+            <img src="college-logo-90x130.png" alt="Logo">
+        </div>
+        <div class="Logo">  
+            <h3>Dr. J J Magdum Trust’s (No. E/902)</h3>
+            <h1>Dr. J. J. Magdum College Of Engineering, Jaysingpur</h1>
+            <h3>An Autonomous Institute (From 2024-25)</h3>
+            <h3>‘NAAC ‘A’ Grade Institute’</h3>
+            <h4>Approved by A.I.C.T.E., New Delhi, Recognized by Govt. of Maharashtra (DTE) & Affiliated to Shivaji University, Kolhapur</h4>
+        </div>
+    </div>
     <nav class="navbar">
-        <div class="logo">Dr. J. J. Magdum College Of Engineering, Jaysingpur</div>
+        <marquee behavior="scroll" direction="left" class="moving-text">
+            Welcome to Dr. J. J. Magdum College Of Engineering, Jaysingpur 
+        </marquee>
+        <marquee behavior="scroll" direction="left" class="moving-text">
+            An Autonomous Institute (From 2024-25)
+        </marquee>
+    </nav>
+    <div class="secondary-nav">
         <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
             <li><a href="#">About</a></li>
             <li><a href="Register.html">Register</a></li>
             <li><a href="Login.html">Login</a></li>
         </ul>
-    </nav>
+    </div>
     <section class="banner">
-        <img src="college_building.jpg" alt="College Building">
+        <img src="collage.png" alt="College Building">
     </section>
     <section class="departments">
         <h2>Our Departments</h2>
