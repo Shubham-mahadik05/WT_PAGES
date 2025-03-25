@@ -3,36 +3,108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WT Site</title>
-    <link rel="stylesheet" href="styles2.css">
+    <title>College Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .top-bar {
+            background-color: #ff6600;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #1e3a8a;
+            padding: 15px;
+            color: white;
+        }
+        .nav-links {
+            list-style: none;
+            display: flex;
+        }
+        .nav-links li {
+            margin: 0 15px;
+        }
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+        }
+        .banner img {
+            width: 100%;
+            height: auto;
+        }
+        .departments {
+            text-align: center;
+            padding: 20px;
+        }
+        .department-list {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .department {
+            background-color: #e0e0e0;
+            padding: 15px;
+            border-radius: 10px;
+        }
+        .chat-box {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: white;
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        .chat-footer button {
+            margin-top: 10px;
+            background-color: #1e3a8a;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            border-radius: 3px;
+        }
+    </style>
 </head>
 <body>
-    <nav class="nav-bar">
-            <div class="DTE">
-                <h2>DTE Code :CN-6277</h2>
-            </div>
-            <div class="title">
-                <div class="Logo">
-                    <img src="college-logo-90x130.png" alt="Logo">
-                </div>
-                <div class="Logo">
-                    <h3>Dr. J J Magdum Trust’s (No. E/902)</h3>
-                    <h1>Dr. J. J. Magdum College Of Engineering, Jaysingpur</h1>
-                    <h3>An Autonomous Institute( From 2024-25)</h3>
-                    <h2>‘NAAC ‘A’ Grade Institute’</h2>
-                    <h4>Approved by A.I.C.T.E., New Delhi, Recognized by Govt. of Maharashtra (DTE) & Affiliated to Shivaji University, Kolhapur</h4>
-                </div>
-            </div>
-            <div class="sliding text">
-            </div>
-            <div class="site">
-                <a href="index.html">Home </a>
-                <a href="Register.html">Register</a>
-                <a href="Login.html">Login</a>
-                <a href="About.html">About</a>
-                <a href="Developer.html">Developer</a>
-            </div>
-        </div>
+    <header class="top-bar">DTE Code : EN-6277</header>
+    <nav class="navbar">
+        <div class="logo">Dr. J. J. Magdum College Of Engineering, Jaysingpur</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="Register.html">Register</a></li>
+            <li><a href="Login.html">Login</a></li>
+        </ul>
     </nav>
+    <section class="banner">
+        <img src="college_building.jpg" alt="College Building">
+    </section>
+    <section class="departments">
+        <h2>Our Departments</h2>
+        <div class="department-list">
+            <div class="department">Civil Engineering</div>
+            <div class="department">Mechanical Engineering</div>
+            <div class="department">Computer Science</div>
+            <div class="department">Electronics Engineering</div>
+        </div>
+    </section>
+    <div class="chat-box">
+        <div class="chat-header">Customer Support</div>
+        <div class="chat-body">👋 Hi! How can we help?</div>
+        <div class="chat-footer">
+            <button>I have a question</button>
+            <button>Tell me more</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
