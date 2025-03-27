@@ -8,40 +8,63 @@
 </head>
 <body>
     <div class="container2">
-        <form action="#" method="post" class="form">
+        <form action="#" method="post" class="form" onsubmit="return validateRegisterForm()">
             <h1>Register Page</h1>
             <div class="form-group">
                 <label for="NAME">NAME</label><br>
-                <input type="text" name="name" id="name" placeholder="First Name " required>
-                <input type="text" name="name" id="name" placeholder="Middle Name " required>
-                <input type="text" name="name" id="name" placeholder="Last Name " required>
+                <input type="text" name="name" id="name" placeholder="First Name" required pattern="[A-Za-z\s]+" title="Name can only contain letters and spaces.">
+                <input type="text" name="name" id="name" placeholder="Middle Name" required pattern="[A-Za-z\s]+" title="Name can only contain letters and spaces.">
+                <input type="text" name="name" id="name" placeholder="Last Name" required pattern="[A-Za-z\s]+" title="Name can only contain letters and spaces.">
             </div>
             <div class="form-group">
                 <label for="Address">ADDRESS</label><br>
-                <input type="text" name="Address" id="Address" placeholder="Towm" required>
-                <input type="text" name="Address" id="Address" placeholder="City" required>
-                <input type="text" name="Address" id="Address" placeholder="Dist" required>
+                <input type="text" name="Address" id="Address" placeholder="Town" required pattern="[A-Za-z\s]+" title="Address can only contain letters and spaces.">
+                <input type="text" name="Address" id="Address" placeholder="City" required pattern="[A-Za-z\s]+" title="City can only contain letters and spaces.">
+                <input type="text" name="Address" id="Address" placeholder="Dist" required pattern="[A-Za-z\s]+" title="District can only contain letters and spaces.">
             </div>
             <div class="form-group">
                 <label for="Eduation">EDUCTION</label><br>
-                <input type="text" name="Eduation" id="Eduation" placeholder="Collage Name" required>
-                <input type="text" name="Eduation" id="Eduation" placeholder="University" required>
-                <input type="text" name="Eduation" id="Eduation" placeholder="Department" required>
+                <input type="text" name="Eduation" id="Eduation" placeholder="College Name" required pattern="[A-Za-z\s]+" title="College name can only contain letters and spaces.">
+                <input type="text" name="Eduation" id="Eduation" placeholder="University" required pattern="[A-Za-z\s]+" title="University name can only contain letters and spaces.">
+                <input type="text" name="Eduation" id="Eduation" placeholder="Department" required pattern="[A-Za-z\s]+" title="Department name can only contain letters and spaces.">
             </div>
             <div class="form-group">
                 <label for="Contact">CONTACT</label><br>
-                <input type="number" name="contact" id="contact" placeholder="Number" required>
+                <input type="number" name="contact" id="contact" placeholder="Number" required pattern="\d{10}" title="Contact number must be 10 digits.">
                 <input type="email" name="contact" id="contact" placeholder="Email" required>
-                <input type="number" name="contact" id="content" placeholder="Alternate Number " required>
+                <input type="number" name="contact" id="content" placeholder="Alternate Number" required pattern="\d{10}" title="Alternate contact number must be 10 digits.">
             </div>
             <div class="form-group">
                 <label for="Password">PASSWORD</label><br>
-                <input type="password" name="Password" id="Password" placeholder="new password" required>
-                <input type="password" name="Password" id="Password" placeholder="current password" required>
+                <input type="password" name="Password" id="Password" placeholder="new password" required pattern=".{6,}" title="Password must be at least 6 characters long.">
+                <input type="password" name="Password" id="Password" placeholder="current password" required pattern=".{6,}" title="Password must be at least 6 characters long.">
             </div>
             <button type="submit" value="submit" name="Register" id="Register">Register</button>
             <p>I have an account? <a href="Login.html">Login Now</a></p>
         </form>
     </div>
+    <script>
+        function validateRegisterForm() {
+            const nameFields = document.querySelectorAll('input[name="name"]');
+            const addressFields = document.querySelectorAll('input[name="Address"]');
+            const educationFields = document.querySelectorAll('input[name="Eduation"]');
+            const contactFields = document.querySelectorAll('input[name="contact"]');
+            const passwordFields = document.querySelectorAll('input[name="Password"]');
+
+            for (const field of [...nameFields, ...addressFields, ...educationFields, ...contactFields, ...passwordFields]) {
+                if (!field.value.trim()) {
+                    alert('Please fill in all fields.');
+                    return false;
+                }
+            }
+
+            if (passwordFields[0].value !== passwordFields[1].value) {
+                alert('Passwords do not match.');
+                return false;
+            }
+
+            return true;
+        }
+    </script>
 </body>
 </html>
