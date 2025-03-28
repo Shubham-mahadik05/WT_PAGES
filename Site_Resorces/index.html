@@ -66,6 +66,13 @@
             padding: 15px;
             border-radius: 10px;
         }
+        .department-list a {
+            color: black;
+            text-decoration: none;
+        }
+        .department-list a:hover {
+            text-decoration: underline;
+        }
         .chat-box {
             position: fixed;
             bottom: 20px;
@@ -85,6 +92,61 @@
             cursor: pointer;
             border-radius: 3px;
         }
+        .footer {
+            text-align: center;
+            padding: 40px 25px;
+            background: linear-gradient(90deg, #2c2f33, #313b46);
+            color: white;
+            margin-top: 40px;
+            font-size: 1.2rem;
+        }
+        .social-links {
+            margin: 20px 0;
+        }
+        .social-links a {
+            color: white;
+            margin: 0 15px;
+            font-size: 1.5rem;
+            transition: color 0.3s;
+        }
+        .social-links a:hover {
+            color: #ff6600;
+        }
+        .developer-info {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            background-color: white;
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        .developer-social-icons {
+            display: none;
+            position: fixed;
+            bottom: 70px;
+            left: 10px;
+            background-color: white;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+        }
+        .developer-social-icons a {
+            color: black;
+            margin: 0 10px;
+            font-size: 1.8rem;
+            text-decoration: none;
+        }
+        .developer-social-icons a:hover {
+            color: white;
+            background-color: black;
+            border-radius: 50%;
+            padding: 5\2px;
+        }
+        .naac-grade {
+            color: rgb(255, 166, 0);
+        }
     </style>
 </head>
 <body>
@@ -102,7 +164,7 @@
             <h3>Dr. J J Magdum Trust’s (No. E/902)</h3>
             <h1>Dr. J. J. Magdum College Of Engineering, Jaysingpur</h1>
             <h3>An Autonomous Institute (From 2024-25)</h3>
-            <h3>‘NAAC ‘A’ Grade Institute’</h3>
+            <h3 class="naac-grade">‘NAAC ‘A’ Grade Institute’</h3>
             <h4>Approved by A.I.C.T.E., New Delhi, Recognized by Govt. of Maharashtra (DTE) & Affiliated to Shivaji University, Kolhapur</h4>
         </div>
     </div>
@@ -128,11 +190,11 @@
     <section class="departments">
         <h2>Our Departments</h2>
         <div class="department-list">
-            <div class="department">Civil Engineering</div>
-            <div class="department">Mechanical Engineering</div>
-            <div class="department">Computer Science</div>
-            <div class="department">Electronics Engineering</div>
-            <div class="department">AI&DS Engineering</div>
+            <a href="https://civil.jjmcoe.ac.in/" class="department">Civil Engineering</a>
+            <a href="https://mech.jjmcoe.ac.in/" class="department">Mechanical Engineering</a>
+            <a href="https://it.jjmcoe.ac.in/" class="department">Information Technology</a>
+            <a href="https://entc.jjmcoe.ac.in/https://entc.jjmcoe.ac.in/l" class="department">Electronics Engineering</a>
+            <a href="https://aids.jjmcoe.ac.in/" class="department">AI&DS Engineering</a>
         </div>
     </section>
     <div class="chat-box">
@@ -143,6 +205,30 @@
             <button>Tell me more</button>
         </div>
     </div>
+    <footer class="footer">
+        <div class="social-links">
+            <a href="https://www.facebook.com/jjmcoe.ac.in/" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://x.com/Dr_jjmcoe/status/1679340125879406592" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.linkedin.com/school/jjmcoe/posts/?feedView=all" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.instagram.com/jjmcoe_edu/"><i class="fab fa-instagram" target="_blank"></i></a>
+        </div>
+        <p>Address: Jaysingpur-Wathar Road, Jaysingpur, Maharashtra 416101</p>
+        <p>&copy; 2025 Dr. J. J. Magdum College Of Engineering. All rights reserved.</p>
+    </footer>
+    <div class="developer-info" onclick="toggleSocialIcons()">
+        <p>Developed by: Shubham Mahadik</p>
+    </div>
+    <div class="developer-social-icons" id="developerSocialIcons">
+        <a href="https://www.instagram.com/sdm_coder05/?utm_source=qr#" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://github.com/Shubham-mahadik05?tab=overview&from=2025-03-01&to=2025-03-28" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/shubham-mahadik-927770276/" target="_blank"><i class="fab fa-linkedin"></i></a>
+    </div>
     <script src="script.js"></script>
+    <script>
+        function toggleSocialIcons() {
+            const icons = document.getElementById('developerSocialIcons');
+            icons.style.display = icons.style.display === 'block' ? 'none' : 'block';
+        }
+    </script>
 </body>
 </html>
